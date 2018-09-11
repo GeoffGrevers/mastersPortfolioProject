@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Step S</title>
+    <meta name="viewport" width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, charset="UTF-8">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,700" rel="stylesheet">
+    <style> body {padding: 0; margin: 0; background: #F2F2F2; font-family: 'Montserrat', sans-serif; height: 100vh;}
+    h1 {color: black; font-family:helvetica; text-align:center;}
+    p {color: black; background-color:rgba(236,236,236,0.5); font-family:helvetica; text-align:left; margin: 30px; margin-left: 50px; margin-top: 50px; border-radius: 2px;}
+    </style>
+    <script src="../p5.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../addons/p5.dom.min.js"></script>
+    <script src="../addons/Tone.js"></script>
+    <script type="text/javascript" src="../addons/dat.gui.min.js"></script>
+    <script src="sketch.js"></script>
+    <script src="cell.js"></script>
+    <script src="manipulations.js"></script>
+    <script src="functions.js"></script>
+    <script src="instruments.js"></script>
+
+  </head>
+
+  <body>
+    <h1>Pattern Manipulation Visualisation</h1>
+    <p> <br />
+      Instructions: <br />
+      1. Select notes on the sequencer <br />
+      2. Select the manipulations you would like to use <br />
+      3. Press play <br />
+      Please pause before changing manipulations, or it may not work! <br />
+      <br />
+      By default manipulation 1 is rotate anticlockwise, while manipulation 2 is interpolation. <br />
+      Click on a saved pattern to load it.<br />
+      <br />
+        Libraries used to make this website: <br />
+        Tone.js (music/sounds) <br />
+        p5.js (graphics) <br />
+        dat.gui.js (graphical user interface (the menu top right)) <br />
+        <br />
+    The purpose of the system is to allow for musicians with a beginning curiosity into algorithmic music to have immediate access to a system that can be used to visualise organised sounds composed using algorithmic techniques, with a small a barrier to entry as possible. Using a step sequencer, it follows standards that are present in popular music making software, which allows for one to use the system without having to learn how to. In the current landscape of algorithmic music there are tools available to the people deeply involved within the field of study in the form of coding languages (for example ixi lang or TidalCycles), while there are also music making games (such as blockdust) based on algorithmic principles, with no representation of the field of study. This system is a higher-level abstraction compared to coding for music, shown visually.
+    <br />
+    <br />
+    Behaviour of the manipulations: <br />
+    Rotate (prime and retrograde): This cycles through the sequencer, with the next run through shifting the position of the notes either fowards or backwards.<br />
+    Interpolate: This assigns notes randomly to columns that have no notes yet.<br />
+    Reverse: Reverses the notes that have been input.<br />
+
+    <br />
+    Some Further Reading: <br />
+    Spiegel, Laurie, ‘Manipulations of Musical Patterns’, IEEE Computer Society, 393 (1981), 19-22.  <br />
+    Spiegel, Laurie, ‘Music Mouse - An Intelligent Instrument’, <a href="http://musicmouse.com/"> Music Mouse website</a> <br />
+    Magnusson, Thor and Alex McLean, ‘Performing with Patterns of Time’, in The Oxford Handbook of Algorithmic Music, ed. by Alex McLean and Roger T. Dean (New York: Oxford University Press, 2018) pp. 245-62  <br />
+    Loy, Gareth, Musimathics: The Mathematical Foundations of Music, (Cambridge, USA: MIT Press, 2006) <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    The following are pattern manipulations that are built into the tone.js library: <br />
+    up - cycles upward <br />
+    down - cycles downward <br />
+    upDown - up then and down <br />
+    downUp - cycles down then and up <br />
+    alternateUp - jump up two and down one <br />
+    alternateDown - jump down two and up one <br />
+    random - randomly select an index <br />
+    randomWalk - randomly moves one index away from the current position <br />
+    randomOnce - randomly select an index without repeating until all values have been chosen <br />
+    <a href="https://tonejs.github.io/docs/r12/CtrlPattern"> Source</a> <br />
+  </p>
+
+  </body>
+
+</html>
